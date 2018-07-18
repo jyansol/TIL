@@ -1,49 +1,43 @@
-# JAVASCRIPT 01. Drum Kit
+# JAVASCRIPT 02. JS and CSS clock
 
 
 # View Source
 
-<a href="drum_kit.html"> VIEW DEMO </a>
 
 
-    ### 프레임 지우기
+    const secondHand = document.querySelector('.second-hand');
 
-    function removeTransition(e) {
-    if (e.propertyName !== 'transform') return; 
-    e.target.classList.remove('playing'); 
-    //함수e가 지정된 타겟의 classList(속성)을 가져와서 .playing 인것을 지운다. 
-    }
+    const minsHand = document.querySelector('.min-hand');
+
+    const hourHand = document.querySelector('.hour-hand');
 
 
 
-    ### 소리나게
+    function setDate(){
+    
+    const now = new Date();
 
-    function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
-    //const : 전역,지역 상수
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    if (!audio) return; //의미?
+    const seconds = now.getSeconds();
+    const secondsDegrees = ((seconds / 60) * 360) + 90; 
+    //계산의 의미 ㅠㅠ
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-    key.classList.add('playing'); 
-    //key(keycode입력된div)의 속성에 .playing 추가
-    audio.currentTime = 0; //의미? 클릭할때마다만?
-    audio.play(); //재생 
+    const mins = now.getMinutes();
+    const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+    const hour = now.getHours();
+    const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`; 
+    
     } 
     
-    const keys = Array.from(document.querySelectorAll('.key')); 
-    // .key 인 배열 생성(querySelectorAll) 
+    setInterval(setDate, 1000); //1초마다 반복
     
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition)); 
-    // div.key에 key의 'transitionend'라는 eventlistener가 발생했을때 배열 각각에 함수 removerTransition을 add 
-    
-    window.addEventListener('keydown', playSound); //window에 keydown이라는 eventlistener가 발생했을때 playsound라는 함수 재생
-
+    setDate(); //선언
 
 
 # memo
-- ES6 개념
-- 함수의 인자 개념
-- return의 의미
-- var / let / const 차이
-- vanila javascript는 거의 써본 적이 없고, jQuery 이용을 많이해서 생소한 부분이 많음
+ * 수학을 잘하면 '좋겠다'
+ * transform
 
