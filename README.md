@@ -24,4 +24,10 @@ Today I Learned
         <li><a href="#">03. CS50 : Topic3</a></li>
         </ul>
     </li>
+    <li style=" list-style:none; ">
+        <div style="font-weight:800">20180801</div>
+        <ul>
+        <li><a href="#">04. JAVASCRIPT30 : Array</a></li>
+        </ul>
+    </li>
 </ul>
