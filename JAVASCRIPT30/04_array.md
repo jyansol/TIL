@@ -1,4 +1,4 @@
-# JAVASCRIPT 03. CSS variables with JS
+# JAVASCRIPT 04. Array
 
 
 # View Source
