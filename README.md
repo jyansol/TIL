@@ -9,4 +9,7 @@ Today I Learned (~9월30일)
     <li>
         CS50       
     </li>
+    <li>
+        AlGORITHM       
+    </li>
 </ul>
