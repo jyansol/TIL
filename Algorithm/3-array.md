@@ -60,6 +60,21 @@ addArray([1, 2, 3], [4, 5, 6, 7]) -> [5, 7, 9, 7]
 ```
 ```js
 const print = (arr1,arr2) => {
+  // 원본배열이 변경됨 .slice() 는 배열을 복사할 때도 사용된다
+  // let longer
+  // let shorter
+  // if (arr1.length > arr2.length){
+  //   longer = [...arr1]
+  //   shorter = arr2.slice()
+  // } else {
+  //   longer = arr2.slice()
+  //   shorter = arr1.slice()
+  // }
+  // for(let i =0; i < shorter.length ; i++){
+  //   longer[i] =+ shorter[i]
+  // }
+  //   return longer;
+
   if (arr1.length > arr2.length) {
     const temp = arr1
     arr1 = arr2
@@ -76,20 +91,33 @@ const print = (arr1,arr2) => {
   return newArr 
 }
 print([1, 2, 3], [4, 5, 6, 7]);
+
 ```
 
 ### 문제 6
 
 배열을 입력받아, 배열의 요소 중 두 개를 선택하는 조합을 모두 포함하는 배열을 작성하세요.
-
 예:
 ```
 combination([1, 2, 3]); -> [[1, 2], [1, 3], [2, 3]]
-//1 이랑
-// 중첩 루프돌려서
-i 가 0 j 1
-
+//
 ```
+```js
+const combination = (arr) => {
+  const newArr = [];
+  for (let i =0 ; i < arr.length-1 ; i++) {
+  // -1 끝까지 갈 필요가없다.
+    for (let j =i+1 ; j < arr.length ; j++){
+      newArr.push([arr[i],arr[j]])
+    }
+  }
+  return newArr;
+  }
+
+combination([1,2,3]);
+```
+
+
 
 ### 문제 7
 
@@ -106,6 +134,28 @@ coins(263, [100, 50, 10, 5, 1]);
 1
 1
 1
+```
+```js
+const print = (money,coins) => {
+  //방어적 코드02 : 배열을 반드시 내림차순으로 정렬
+  coins.sort((x,y) => y - x);
+  //현재 내가 보고 있는 동전종류
+  let currentIndex = 0;
+  let remain = money ;
+  while (remain > 0 && currentIndex < coins.length){
+    // 방어적 코드01 : && currentIndex < coins.length
+    if(coins[currentIndex] <= remain) {
+        remain -= coins[currentIndex];
+      //남은 금액에서 현재 보고 있는 코인을 빼서
+      // 출력
+      // return - 끝
+      console.log(coins[currentIndex])
+    } else if (coins[currentIndex] > remain) {
+      currentIndex ++ ;
+    }
+  }  
+}
+print(263, [50, 100, 10, 5]);
 ```
 
 ### 문제 8
