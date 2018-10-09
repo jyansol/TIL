@@ -173,3 +173,28 @@ print(263, [50, 100, 10, 5]);
 ### 문제 8
 
 수 타입의 값만 들어있는 배열을 입력받아, 해당 배열을 오름차순 정렬하는 함수를 작성하세요. (`Array.prototype.sort`를 사용하지 않고 작성해보세요. [선택 정렬](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC)을 참고하세요.)
+
+
+### 추가문제 문제 2. 배열을 입력받아, 해당 배열에 들어있는 요소들 중 최대값을 찾는 함수를 작성하세요. (Array.prototype.reduce를 이용하세요)
+```js
+const max = (arr) => {
+  //reduce 쓸때
+  //누적값의 역할이 무엇인지를 잘 정하는 것이 중요하다
+
+  //누적값의 역할 : 지금까지 봤던 숫자 중의 제일 큰 수
+  return arr.reduce((acc,item)=>{
+    //안에 들어있는 함수의 반환값이 다음단계의 누적값이 된다.
+    if(acc > item){
+      return acc
+    } else {
+      return item
+    }
+  }, -Infinity);
+
+  // return arr.reduce((acc,item) => acc > item ? acc : item, 0)
+  // -Infinity 그 어떤 수보다 작은 수
+}
+
+max([-3,-4,-5,-7,-55]);
+max([3,4,5,7,55]);
+```
