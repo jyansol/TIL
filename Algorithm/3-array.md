@@ -4,7 +4,19 @@
 
 예:
 ```
-range(3, 6); -> [3, 4, 5, 6]
+range(3, 6); -> [3, 4, 5, 6]r
+```
+
+```js
+// range(3, 6); -> [3, 4, 5, 6]
+function range(start,end){
+  const arr = [];
+  for(let i = start; i <= end ; i++){
+    arr.push(i);
+  }
+  return arr
+}
+range(3,8);
 ```
 
 ### 문제 2

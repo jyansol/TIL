@@ -2,9 +2,27 @@
 
 양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요.
 
+```js
+const area = (num) => {
+  return Math.PI * num **2
+}
+area(5);
+```
+
 ### 문제 2
 
 두 정수 `min`, `max` 를 입력받아, `min` 이상 `max` 미만인 임의의 정수를 반환하는 함수를 작성하세요.
+
+```js
+const print = (min,max) => {
+  const arr = [];
+  for(let i = min; i < max ; i++){
+    arr.push(i);
+  }
+  return arr
+}
+print(3,8);
+```
 
 ### 문제 3
 
@@ -16,17 +34,60 @@ ceilBy5(32); -> 35
 ceilBy5(37); -> 40
 ```
 
+```js
+const rounding = (num) => {
+  return Math.ceil(num/5) * 5 ;
+}
+rounding(12);
+```
+
 ### 문제 4
 
 배열을 입력받아, 요소들의 순서를 뒤섞은 새 배열을 반환하는 함수를 작성하세요.
+```js
+const shuffleArray = (arr) => {
+   var temp = [];
+   var len=arr.length;
+   while(len){
+      temp.push(arr.splice(Math.floor(Math.random()*arr.length),1)[0]);
+      len--;
+   }
+   return temp;
+}
+shuffleArray(['a','b','c']);
+```
 
 ### 문제 5
 
 임의의 HTML 색상 코드를 반환하는 함수를 작성하세요.
+```js
+const randomHtmlColor = () => {
+  const color = '0123456789abcdef';
+  let newStr = '';
+  
+  for(let i=0; i < 6; i++) {
+    newStr += color[Math.floor(Math.random()*16)];
+  }
+  return newStr;
+}
+randomHtmlColor();
+```
 
 ### 문제 6
 
 양수를 입력받아, 그 수만큼의 길이를 갖는 임의의 문자열을 반환하는 함수를 작성하세요.
+```js
+const make = (num) => {
+    let text = '';
+    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( let i=0; i < num; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+make(5);
+```
 
 
 ### 문제 7
