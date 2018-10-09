@@ -174,6 +174,17 @@ print(263, [50, 100, 10, 5]);
 
 수 타입의 값만 들어있는 배열을 입력받아, 해당 배열을 오름차순 정렬하는 함수를 작성하세요. (`Array.prototype.sort`를 사용하지 않고 작성해보세요. [선택 정렬](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC)을 참고하세요.)
 
+### 추가문제 1.
+배열을 입력받아, 해당 배열에 들어있는 요소들 중 최대값을 찾는 함수를 작성하세요. (루프를 이용하세요)
+```js
+const print = (arr) => {
+  for(let i =0; i < arr.length ; i++){
+    arr.sort((x, y) => y - x);
+  }
+  return arr;
+}
+print([1,4,9,2]);
+```
 
 ### 추가문제 2. 
 배열을 입력받아, 해당 배열에 들어있는 요소들 중 최대값을 찾는 함수를 작성하세요. (Array.prototype.reduce를 이용하세요)
@@ -198,4 +209,48 @@ const max = (arr) => {
 
 max([-3,-4,-5,-7,-55]);
 max([3,4,5,7,55]);
+```
+
+## 추가문제 3.
+2차원 배열을 입력받아 1차원 배열로 바꾸는 함수를 작성하세요. (루프를 이용하세요)
+```js
+const print = (...arr) => {
+  const newArr = Array.from(arr);
+  let arr1 = [];
+  //배열 루프 돌려서 추가해
+  // console.log(newArr);
+  for(let i =0; i < newArr.length ; i++){
+    let current = arr[i]
+    for(let j =0; j < current.length ; j++){
+      arr1.push(current[j]);
+    }
+  }
+  return arr1
+}
+print([1,2,3],[4,5,6],[7,8,9]);
+```
+
+## 추가문제 4.
+2차원 배열을 입력받아 1차원 배열로 바꾸는 함수를 작성하세요. (Array.prototype.reduce를 이용하세요)
+```js
+const print = (arr) => {
+  return arr.reduce((acc,item)=>acc.concat(item),[]);
+}
+print([[1,2,3],[4,5,6],[7,8,9]]);
+```
+
+
+## 추가문제 7.
+배열을 입력받아, 요소 중 아무거나 하나를 골라서 반환하는 함수를 작성하세요.
+```js
+const randomItem = (arr) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+randomItem([1, 2, 76, 4, 5])
+```
+
+## 추가문제 8.
+배열을 입력받아, 요소들의 순서를 뒤섞은 새 배열을 반환하는 함수를 작성하세요. (단, 원본 배열이 변경되어서는 안 됩니다.)
+```js
+
 ```
