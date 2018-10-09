@@ -22,6 +22,16 @@ range(3,8);
 ### 문제 2
 
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 합을 구하는 함수를 작성하세요.
+```js
+const sum = (arr) => {
+  // const arr = [];
+  console.log(arr);
+  const result = arr.reduce((acc, item) => acc + item, 0);
+  return result;
+}
+
+sum([3, 4, 5]);
+```
 
 ### 문제 3
 
