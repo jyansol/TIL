@@ -250,6 +250,8 @@ print([[1,2,3],[4,5,6],[7,8,9]]);
 ```
 
 
+
+
 ## 추가문제 7.
 배열을 입력받아, 요소 중 아무거나 하나를 골라서 반환하는 함수를 작성하세요.
 ```js
@@ -262,5 +264,15 @@ randomItem([1, 2, 76, 4, 5])
 ## 추가문제 8.
 배열을 입력받아, 요소들의 순서를 뒤섞은 새 배열을 반환하는 함수를 작성하세요. (단, 원본 배열이 변경되어서는 안 됩니다.)
 ```js
-
+const shuffleArray = (arr) => {
+   const temp = arr.slice();
+   const newArr = [];
+   const len = temp.length;
+   for(let i=0;i < len;i++){
+      newArr.push(temp.splice(Math.floor(Math.random()*temp.length),1)[0]);
+   }
+   console.log(`원본배열은 : [${arr}]`);
+   return newArr;
+}
+shuffleArray(['a','b','c']);
 ```

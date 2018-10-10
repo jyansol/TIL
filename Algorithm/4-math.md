@@ -36,6 +36,7 @@ ceilBy5(37); -> 40
 
 ```js
 const rounding = (num) => {
+  //반올림은 round()
   return Math.ceil(num/5) * 5 ;
 }
 rounding(12);
@@ -45,16 +46,29 @@ rounding(12);
 
 배열을 입력받아, 요소들의 순서를 뒤섞은 새 배열을 반환하는 함수를 작성하세요.
 ```js
+//01
 const shuffleArray = (arr) => {
-   var temp = [];
-   var len=arr.length;
+   const temp = [];
+   let len = arr.length;
    while(len){
-      temp.push(arr.splice(Math.floor(Math.random()*arr.length),1)[0]);
+      temp.push(arr.splice(Math.floor(Math.random()*len),1)[0]);
       len--;
    }
    return temp;
 }
 shuffleArray(['a','b','c']);
+
+//02
+const shuffleArray = (arr) => {
+   const temp = [];
+   const len = arr.length;
+   for(let i=0;i < len;i++){
+      temp.push(arr.splice(Math.floor(Math.random()*arr.length),1)[0]);
+   }
+   return temp;
+}
+shuffleArray(['a','b','c']);
+
 ```
 
 ### 문제 5
@@ -62,8 +76,8 @@ shuffleArray(['a','b','c']);
 임의의 HTML 색상 코드를 반환하는 함수를 작성하세요.
 ```js
 const randomHtmlColor = () => {
-  const color = '0123456789abcdef';
-  let newStr = '';
+  const color = '0123456789ABCDEF';
+  let newStr = '#';
   
   for(let i=0; i < 6; i++) {
     newStr += color[Math.floor(Math.random()*16)];
@@ -72,6 +86,17 @@ const randomHtmlColor = () => {
 }
 randomHtmlColor();
 ```
+###추가문제. 0~255 사이의 문자열을 반환하는 함수 rgb(22,46,8)
+```js
+const print = () =>{
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+
+  return `rgb(${r},${g},${b})`
+}
+print();
+```
 
 ### 문제 6
 
@@ -79,19 +104,31 @@ randomHtmlColor();
 ```js
 const make = (num) => {
     let text = '';
-    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    for( let i=0; i < num; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
+    for( let i=0; i < num; i++ ) {
+        const sss = Math.floor(Math.random() * str .length);
+        text += str[sss]
+}
     return text;
 }
 make(5);
 ```
 
+### 추가문제 codepint
+```js
+const print = (n) => {
+  let result = '';
+  for(let i=0;i<n;i++){
+    result += String.fromCharCode(Math.floor(Math.random() * 65536))
+  }
+  return result
+}
+print(4);
+```
+
 
 ### 문제 7
-
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 표준편차를 구하는 함수를 작성하세요.
 //reduce() => 합 % arr.length
 ```js

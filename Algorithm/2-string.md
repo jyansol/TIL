@@ -64,7 +64,24 @@ print('hello');
 countChar('tomato'); -> {t: 2, o: 2, m: 1, a: 1}
 ```
 ```js
-c
+const countChar = (str) => {
+  let obj = {};
+
+  for(let i = 0; i < str.length ; i++){ 
+    const cahr = str[i] ;
+      // 문자 하나하씩 쪼개서 빈 객체에 담을껀데
+      // 문자가 있으면 숫자가 늘어나고
+      // 아니면 새로 만들어서 넣고 "글자" : 1
+    if(!(cahr in obj)){
+      obj[cahr] = 1 ;
+    }else {
+      obj[cahr] ++ ;
+    }
+  }
+  return obj;
+}
+countChar('tomato');
+
 ```
 
 
