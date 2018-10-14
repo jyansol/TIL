@@ -19,7 +19,7 @@
 - 자바스크립트 값의 종류 Primitive, Reference
   + Primitive : 자바스크립트는 동적 언어로, 타입을 미리 선언할 필요가 없다. 타입은 프로그램이 처리되는 과정에서 자동으로 파악됨.
   ex) string, number, boolean, null, undefined, symbol 
-  + Reference : 
+  + Reference : 참조, 화살표 / 객체가 컴퓨터 메모리 상에서 어디에 저장되었는지를 가리키는 값
 - String
 - Hoist
   + 
