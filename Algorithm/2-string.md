@@ -9,8 +9,8 @@ insensitiveEqual('hello', 'Hello'); -> true
 insensitiveEqual('hello', 'world'); -> false
 ```
 ```js
-function insensitiveEqual(srt1, str2){
-  return srt1.toLowerCase() === str2.toLowerCase();
+function insensitiveEqual(str1, str2){
+  return srt1 === str2;
   // ? true : false 이거 안적어줘도 됨.
 }
 insensitiveEqual('hello','Hello');

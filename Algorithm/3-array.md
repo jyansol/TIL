@@ -243,13 +243,102 @@ print([1,2,3],[4,5,6],[7,8,9]);
 ## 추가문제 4.
 2차원 배열을 입력받아 1차원 배열로 바꾸는 함수를 작성하세요. (Array.prototype.reduce를 이용하세요)
 ```js
+//01.
 const print = (arr) => {
   return arr.reduce((acc,item)=>acc.concat(item),[]);
+  //[] : 초기 누적값
 }
 print([[1,2,3],[4,5,6],[7,8,9]]);
+
 ```
 
+## 추가문제 5.
+(3 * 3) 빙고 판을 표현한 배열을 입력받아, 빙고인 경우 true, 아니면 false를 반환하는 함수를 작성하세요. (단, 칸이 비어있는 경우는 0, 칸이 채워져 있는 경우는 1로 표현합니다.)
+```js
+/* 01. 루프 */
+//가로
+const bingo = (arr) => {
+  //한줄한줄
+  for(let i =0; i < 3 ; i++){
+    let checked = true; //내가 지금까지 본 것이 모두 x표시이면 true, 아니면 false
+    //한칸한칸
+    for(let j =0; j < 3 ; j++){
+      if(arr[i][j]===0){
+        checked = false;
+      }
+    }
+    if(checked){
+      return true //만약에 한줄을 다 봤는데도 checked가 true이면 빙고!
+      //if의 위치
+    }
+  //false의 위치
+}
+  //세로
+  for(let i =0; i < 3 ; i++){
+    let checked = true; //내가 지금까지 본 것이 모두 x표시이면 true, 아니면 false
+    //한칸한칸
+    for(let j =0; j < 3 ; j++){
+      if(arr[j][i]===0){
+        checked = false;
+      }
+    }
+    if(checked){
+      return true //만약에 한줄을 다 봤는데도 checked가 true이면 빙고!
+      //if의 위치
+    }
+  }
 
+  //대각선
+  //오른쪽
+  let checked = true;
+  for(let j =0; j < 3 ; j++){
+    //한칸한칸
+    for(let j =0; j < 3 ; j++){
+      if(arr[j][j]===0){
+        checked = false;
+      }
+    }
+    if(checked){
+      return true //만약에 한줄을 다 봤는데도 checked가 true이면 빙고!
+      //if의 위치
+    }
+  }
+  //왼쪽
+  let checked2 = true;
+  for(let j =0; j < 3 ; j++){
+    //한칸한칸
+    for(let j =0; j < 3 ; j++){
+      if(arr[j][2-j]===0){
+        checked2 = false;
+      }
+    }
+    if(checked2){
+      return true //만약에 한줄을 다 봤는데도 checked가 true이면 빙고!
+      //if의 위치
+    }
+  }
+return false
+}
+
+bingo([
+  [0, 1, 0], 
+  [0, 1, 0],
+  [1, 0, 1]
+]) // -> true
+
+
+
+
+/* .every(), .some() 메소드 - 가로 */
+const horizontal = arr.some(
+  innerArr => innerArr.every(item => item === 1)
+  //한줄한줄
+  //하나라도 1 이라면,
+  )
+  if(horizontal){
+    return true
+  }
+```
 
 
 ## 추가문제 7.
