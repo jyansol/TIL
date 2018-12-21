@@ -39,6 +39,12 @@
 - SSR / CSR 을 구분해서 
 
 
+# React
+- state / props
+- context
+
+
+
 
 
 function func() {
