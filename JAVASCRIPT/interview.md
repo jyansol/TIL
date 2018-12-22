@@ -1,4 +1,4 @@
-- JS란
+# JS
   + 
 - Truthy, Falsy
   + Truthy : Boolean Type이 true로 반환될 수 있는 값
