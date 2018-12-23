@@ -3,7 +3,7 @@
 //     this.name = name;
 //     this.age = age;
 //   }
-//   // es6 부터 자동으로 prototype으로 생성됨
+// es6 부터 자동으로 prototype으로 생성됨
 //   sayName() {
 //     return `나의 이름은 ${this.name}입니다.`;
 //   }
@@ -40,6 +40,3 @@ const inventors = [
 
 inventors.some((i) => i.passed === 1543);
 inventors.every((i) => i.passed > 1500);
-
-// 숫자 변수에 저장해두고  import => 한번만 수정
-// 조건문 함수
