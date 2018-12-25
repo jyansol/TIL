@@ -45,8 +45,8 @@
 
 
 
-
-
+- example
+'''js
 function func() {
   var a ;
   console.log(bar); 
@@ -54,6 +54,7 @@ function func() {
   console.log(bar);
 }
 func();
+'''
 
 let,const가 생기면서 블록스코프
 var 
