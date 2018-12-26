@@ -61,3 +61,6 @@ var
 
 
 event bubbling 부모요소까지 
+
+-javascript callback
+  + https://medium.freecodecamp.org/javascript-from-callbacks-to-async-await-1cc090ddad99
