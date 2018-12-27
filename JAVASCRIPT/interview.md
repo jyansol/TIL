@@ -45,8 +45,8 @@
 
 
 
-
-
+- example
+'''js
 function func() {
   var a ;
   console.log(bar); 
@@ -54,9 +54,13 @@ function func() {
   console.log(bar);
 }
 func();
+'''
 
 let,const가 생기면서 블록스코프
 var 
 
 
 event bubbling 부모요소까지 
+
+-javascript callback
+  + https://medium.freecodecamp.org/javascript-from-callbacks-to-async-await-1cc090ddad99
