@@ -64,3 +64,20 @@ event bubbling 부모요소까지
 
 -javascript callback
   + https://medium.freecodecamp.org/javascript-from-callbacks-to-async-await-1cc090ddad99
+
+
+
+이벤트위임
+이벤트 리스너를 하위 요소에 추가하는 대신 상위 요소에 추가하는 기법
+각 하위 항목에 이벤트 핸들러를 연결하지 않고 상위 요소에 하나의 단일 핸들러만 필요하기때문에 메모리 사용공간이 줄어듬
+this
+this는 언제 쓰이는지
+생성자 혹은 메소드에서 객체를 가리킬 때
+1. 함수의 this
+window 객체 (전역객체) : 실수가 발생함
+2. 엄격모드 this
+undefined
+3. bind, call, apply
+4. 화살표함수의 this
+프로토타입 상속이 어떻게 작동하는지
+모든 Javascript 객체는 다른 객체에 대한 참조인 prototype 속성을 가지고 있다. 
