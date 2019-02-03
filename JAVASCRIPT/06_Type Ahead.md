@@ -9,43 +9,40 @@
       //city 정보
 
       const cities = [];
-      // cities 초기화
+      // cities 초기화, 검색어에 따라 바뀔 부분
 
       fetch(endpoint)
         .then((blob) => blob.json())
+        // 객체의 값을 json으로 변환
         .then((data) => cities.push(...data));
-      //date에 'cities에 ...date'를 push
-      //ajax를 구현하는 여러가지 기술이 있음. 그 중에 fetch API가 있음.
-      //형태 뜻
-      //blob의 의미
-      //...date의 의미
-      //console
+      // data에 'cities에 ...data'를 push
+
+      // 기본구조: fetch('주소', 설정객체).then(콜백).catch(콜백);
+      // blob: 응답 객체에서 값을 볼 수 있게 해주는 메소드
 
       function findMatches(wordToMatch, cities) {
         //wordToMatch : input text value
         return cities.filter((place) => {
-          // here we need to figure out if the city or state matches what was searched
-          // place 는 cities의 하나하나
-          const regex = new RegExp(wordToMatch, 'gi'); //검색시 단어가 일치하는 도시 또는 주를 변환하는 함수
+          const regex = new RegExp(wordToMatch, 'gi');
+          //검색시 단어가 일치하는 도시 또는 주를 변환하는 함수
           // RegExp : 검색할때 패턴을 설정해줄 수 있는 생성자
-          //
-          // gi : 전체에서 대소문자 구분 없이 검색 가능
+          // gi : '전체'에서 대소문자 구분 없이 검색 가능
           return place.city.match(regex) || place.state.match(regex);
         });
-      } //검색시 일치하는 값을 찾아내는 함수
+      }
 
       function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        // 인구수에 commas
-        //tostring() > 숫자에 replace()를 못쓰기때문 하지만 이미 string이었음
-        //string DOM vs 일반 DOM
+        // toString() : 숫자에는 replace()메소드를 사용할 수 없기 때문에 사용함
+        // replace() :  어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환
       }
 
       function displayMatches() {
-        const matchArray = findMatches(this.value, cities); //일치하는 값을 matchArray에 담기 //this = target.event
+        const matchArray = findMatches(this.value, cities);
+        //일치하는 값을 matchArray에 담기
+        //this = target.event
         const html = matchArray
           .map((place) => {
-            //.map() : 배열 내의 모든 요소 각각에 함수호출 > 새로운 배열로 반환
             const regex = new RegExp(this.value, 'gi');
             const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
             const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
@@ -56,9 +53,9 @@
       </li>
     `;
           })
-          .join(''); //.join() : 배열의 모든 요소를 연결해 하나의 문자열로
+          .join('');
         suggestions.innerHTML = html;
-      } 
+      }
 
       const searchInput = document.querySelector('.search');
       const suggestions = document.querySelector('.suggestions');
