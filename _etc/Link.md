@@ -9,3 +9,4 @@
 - [github를 웹호스팅으로 이용하기](https://opentutorials.org/module/2398/16117)
 - [Front-end interview github](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Korean/questions/javascript-questions.md)
 - [Front-end interview basic CHECK! LIST!](https://github.com/kesuskim/Front-End-Checklist)
+- [XSS 차단가이드](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
