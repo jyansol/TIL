@@ -15,6 +15,7 @@
 - [Clean Code JavaScript](https://github.com/qkraudghgh/clean-code-javascript-ko/blob/master/README.md)
 - [github를 웹호스팅으로 이용하기](https://opentutorials.org/module/2398/16117)
 - [왜 리액트를 사용할까요](https://environmentset.github.io/2019/02/13/Why-use-React/)
+- [객체](http://insanehong.kr/post/javascript-object/) 
 
 # FE interview
 - [Front-end interview github](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Korean/questions/javascript-questions.md)
