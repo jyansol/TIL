@@ -22,6 +22,5 @@
 - [Front-end interview basic CHECK! LIST!](https://github.com/kesuskim/Front-End-Checklist)
 - [JavaScript 교재(패캠)](https://helloworldjavascript.net/)
 
-
 # jQuery
 - [jQuery 해상도에따라](https://code.i-harness.com/ko-kr/q/1265ee1)
