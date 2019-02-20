@@ -9,6 +9,7 @@
 - [React로 화면전환시 스크롤 맨 위로](https://ideveloper2.tistory.com/34)
 - [XSS 차단가이드](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 - [Robots.txt 역할](https://www.twinword.co.kr/blog/basic-technical-seo/)
+- [send to email-mailto사용하면 불편함, 그럴땐?](https://github.com/SaintSilver/html-form-send-email-via-google-script-without-server/blob/master/README.ko.md)
 
 # 소장용 링크
 - [MarkDown Emoji](https://gist.github.com/rxaviers/7360908)
