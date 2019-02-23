@@ -1,6 +1,7 @@
 # 참고링크모음!
 
 - [Git을 사용한 협업](https://opentutorials.org/module/3967)
+- [Git 협업을 사용해야하는 이유](https://brunch.co.kr/@kiyoungleefige/2)
 - [Git flow](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)
 - [Pull Request](https://blog.outsider.ne.kr/1199)
 
