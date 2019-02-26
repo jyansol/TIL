@@ -31,3 +31,6 @@
 
 # jQuery
 - [jQuery 해상도에따라](https://code.i-harness.com/ko-kr/q/1265ee1)
+
+# React
+- [순수컴포넌트와 일반컴포넌트의 차이](https://medium.com/@async3619/when-to-use-component-or-purecomponent-b810897a19a2)
