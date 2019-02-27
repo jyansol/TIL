@@ -34,3 +34,4 @@
 
 # React
 - [순수컴포넌트와 일반컴포넌트의 차이](https://medium.com/@async3619/when-to-use-component-or-purecomponent-b810897a19a2)
+- [Next.js](https://hackernoon.com/tutorial-ssr-split-testing-and-analytics-with-react-redux-and-next-js-5392799c15c7)
