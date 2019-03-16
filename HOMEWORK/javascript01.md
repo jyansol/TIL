@@ -4,10 +4,20 @@
 ### 값 (value)
 - 값.
 - 숫자, 문자열, boolean, null, undefined 등 이면서 `리터럴(값의 표기법)`을 통해 표현함.
-- 자바스크립트 값의 종류 Primitive, Reference
-  + Primitive : 자바스크립트는 동적 언어로, 타입을 미리 선언할 필요가 없다. 타입은 프로그램이 처리되는 과정에서 자동으로 파악됨.
-  ex) string, number, boolean, null, undefined, symbol 
-  + Reference : 참조, 화살표 / 객체가 컴퓨터 메모리 상에서 어디에 저장되었는지를 가리키는 값
+
+- 자바스크립트 `값의 종류(type)` Primitive(원시타입), Reference(참조타입) 
+  + 자바스크립트에는 7가지의 타입이 존재함.
+    * `Boolean, Null, Undefined, Number, String, Symbol, Object`
+
+  + Primitive(원시타입) : 자바스크립트는 동적 언어로, 타입을 미리 선언할 필요가 없다. 타입은 프로그램이 처리되는 과정에서 자동으로 파악됨.
+    * ex) string, number, boolean, null, undefined, symbol 
+    * 변경 불가능한 값이다.
+
+  + Reference(참조타입) : 참조, 화살표 / 객체가 컴퓨터 메모리 상에서 어디에 저장되었는지를 가리키는 값
+    * ex) Object, Array, function
+
+- [원시타입vs참조타입 표](https://weicomes.tistory.com/133)
+
 ### 식
 - 표현식.
 - 실행했을때 값을 반환하는 식.
