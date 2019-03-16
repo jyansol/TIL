@@ -11,7 +11,7 @@
 
   + Primitive(원시타입) : 자바스크립트는 동적 언어로, 타입을 미리 선언할 필요가 없다. 타입은 프로그램이 처리되는 과정에서 자동으로 파악됨.
     * ex) string, number, boolean, null, undefined, symbol 
-    * 변경 불가능한 값이다.
+    * 변경 불가능한 값이다. (`불변성`)
 
   + Reference(참조타입) : 참조, 화살표 / 객체가 컴퓨터 메모리 상에서 어디에 저장되었는지를 가리키는 값
     * ex) Object, Array, function
@@ -35,7 +35,7 @@
 ### 문
 - 표현식 등으로 구성되며, 그 결과에 따라 컴퓨터에 명령을 내리게 됨
 ```js
-// 01. if else문
+// 01. 조건문
 if (expression) 
     statement 1
 else 
@@ -46,6 +46,10 @@ const num = function message(x) {
             return x + x;
           }
 num(7); // returns 14
+
+// 03. 반복문
+// 04. 제어문
+
 ```
 
 ### Truthy & Falsey
