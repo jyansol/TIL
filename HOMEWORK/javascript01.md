@@ -16,6 +16,8 @@
   + Reference(참조타입) : 참조, 화살표 / 객체가 컴퓨터 메모리 상에서 어디에 저장되었는지를 가리키는 값
     * ex) Object, Array, function
 
+- 변수 : 값을 재사용하기 위해 값에 붙여준 이름. 그 변수를 `식별자`라고한다. 자바스크립트에서 식별자의 이름을 지을때 `CamelCase`로 짓는것이 Good Practice!
+
 - [원시타입vs참조타입 표](https://weicomes.tistory.com/133)
 
 ### 식
