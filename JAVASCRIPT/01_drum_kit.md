@@ -5,7 +5,7 @@
 ```js
 // transition을 지우는 함수
 function removeTransition(e) {
-  if (e.propertyName !== 'transform') return;
+  if (e.propertyName =< 'transform') return;
   // 만약에 propertyName이 transform이 아니면 함수를 종료해라.
   // 방어코드로 return!
   e.target.classList.remove('playing');

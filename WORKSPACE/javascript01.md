@@ -68,6 +68,25 @@ num(7); // returns 14
   프로그래밍에서 어떤 조건이 참인지 거짓인지 나타내기 위해 사용.   
 
 
+## 복습
+- javascript에서는 배열이 가짜다. 
+```js
+typeof [1,2,3]
+// object
+Array.isArray([1,2,3])
+// true
+// ES6기 때문에 폴리필필요.
+```
+- 순수함수
+- 함수.length => 인자의 갯수
+
+```js
+function test(str = '문자'){
+	return str;
+}
+```
+
+
 ### 참고
 - [원시타입vs참조타입 표](https://weicomes.tistory.com/133)
 - [값식문](https://www.bsidesoft.com/?p=760)
