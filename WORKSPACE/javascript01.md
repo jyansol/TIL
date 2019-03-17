@@ -1,6 +1,7 @@
 # Javascript 
 
 ## 1. 값 / 식 / 문
+
 ### 값 (value)
 - 값.
 - 숫자, 문자열, boolean, null, undefined 등 이면서 `리터럴(값의 표기법)`을 통해 표현함.
@@ -21,9 +22,14 @@
 - [원시타입vs참조타입 표](https://weicomes.tistory.com/133)
 
 ### 식
-- 표현식.
+- `표현식`
+  + 함수표현식
+  ```js
+  const var = function() {
+    return 1;
+  } 
+  ```
 - 실행했을때 값을 반환하는 식.
-  + 
   ```js
   10;
   'hello';
@@ -52,12 +58,13 @@ num(7); // returns 14
 
 ```
 
-### Truthy & Falsey
+### Truthy & Falsy
 - truthy : Boolean type이 true로 반환되는 값.
   + true, number, string, object, array 
-- Falsey : Boolean type이 false로 반환되는 값.
+- Falsy : Boolean type이 false로 반환되는 값.
   + undefined, null, NaN, 0, "", false
 
 - Boolean
   + Boolean 타입에 해당하는 값은, true 와 false 밖에 없다. 이 값들을 진리 값이라고 부르며,
   프로그래밍에서 어떤 조건이 참인지 거짓인지 나타내기 위해 사용.   
+
