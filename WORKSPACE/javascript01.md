@@ -19,7 +19,6 @@
 
 - 변수 : 값을 재사용하기 위해 값에 붙여준 이름. 그 변수를 `식별자`라고한다. 자바스크립트에서 식별자의 이름을 지을때 `CamelCase`로 짓는것이 Good Practice!
 
-- [원시타입vs참조타입 표](https://weicomes.tistory.com/133)
 
 ### 식
 - `표현식`
@@ -68,3 +67,8 @@ num(7); // returns 14
   + Boolean 타입에 해당하는 값은, true 와 false 밖에 없다. 이 값들을 진리 값이라고 부르며,
   프로그래밍에서 어떤 조건이 참인지 거짓인지 나타내기 위해 사용.   
 
+
+### 참고
+- [원시타입vs참조타입 표](https://weicomes.tistory.com/133)
+- [값식문](https://www.bsidesoft.com/?p=760)
+- [값식문](https://www.bsidesoft.com/?p=4074)
