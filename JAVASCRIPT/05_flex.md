@@ -2,7 +2,7 @@
 
 
 # View Source
-
+```js
     const panels = document.querySelectorAll('.panel');
 
     function toggleOpen() {
@@ -19,7 +19,7 @@
 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-
+```
 
 # memo
  * classList는 add, remove, contains, toggle 함수를 제어한다.
