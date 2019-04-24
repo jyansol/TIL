@@ -3,7 +3,6 @@
 # View Source
   
   ```js
-  <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
     function makeGreen() {
@@ -59,8 +58,6 @@
     });
     //hugo는?
 
-
-
     // counting
 
     console.count('Wes');
@@ -86,6 +83,6 @@
       });
 
     console.table(dogs);
-
-  </script>
   ```
+
+# 정리
