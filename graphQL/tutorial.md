@@ -1,6 +1,10 @@
 
 # GraphQL 소개
 - GraphQL은 타입과 필드를 정의하고, 각 타입의 필드에 대한 함수로 구현된다.
+- 우리가 원하는 방식대로 query를 날릴 수 있다!
+- 프론트엔드 :: " 이렇게 이렇게 찾아줘 ! "
+- JSON으로 query를 날리고, 자동으로 JSON으로 result값을 받는다.
+- 구조만 알면 query를 날릴 수 있다.
 
 # Qeury & Mutation
 ## 필드
