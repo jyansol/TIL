@@ -61,7 +61,7 @@ ReactDOM.render(
 )
 serviceWorker.unregister();
 ```
-**추가되는 모든 코드에는 세미콜론과 따옴표를 사용하지 않습니다.**
+**추가되는 모든 코드에는 세미콜론과 따옴표를 사용하지 않습니다.** => 이유는 모르겠습니당..
 
 ### 4. Apollo Client로 쿼리 보내기
 - Apollo를 사용할 때, 서버에 쿼리를 보내는 두 가지 방법
@@ -151,3 +151,10 @@ import gql from 'graphql-tag'
 `Error: GraphQL error: Only absolute URLs are supported` 라고 에러가 뜬다..
 
 -- 왜그러지 --
+### Error 잡기
+- 일단 공식문서를 번역기 돌려서 읽다보니 놓치고 지나간 부분이 있어서 component, styles 분리, 파일 위치 변경이 있었다.
+- 왜 그런지는 모르지만 공식문서에서 새로 추가되는 코드에 세미콜론과 큰따옴표를 사용하지 말라고해서, 세미콜론 문제일까싶어 prettier를 끄고 세미콜론을 삭제했다.
+- 인스턴스화 되지 않는거같은데 아무리 찾아도 문제가 뭔지 모르겠음.. 깃헙레포봐도 모르겠음..
+- 터미널에서 `TypeError: Only absolute URLs are supported` Error 발견
+- issue 검색해보니 배포 문제인거같아서 Prisma API 접근을 위해 깃헙으로 접근함 => 이 부분을 놓쳤었음 => 그 이유는 영알못이라 공식문서 볼때 대충 코드부분만 읽고 넘어감
+- 근데 깃헙 이슈보니까 안되는거같음. clone 받아서 했는데 실행 안됨..
