@@ -35,7 +35,7 @@ function draw(e) {
     [lastX, lastY] = [e.offsetX, e.offsetY]; //[] ??
 // 자유로운 선 ? 을 그리기위해 필요한 조건 ? 들
 
-    hue++; // mousedown 하면 hue++ , hue가 ++된다는게 무슨 의미
+hue++; // mousedown 하면 hue++ , hue가 ++된다는게 무슨 의미
 // 로직 짜는게 어렵다 . 
 if (hue >= 360) {
     hue = 0;
