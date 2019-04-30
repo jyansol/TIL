@@ -1,0 +1,28 @@
+<!-- 이벤트 위임 -->
+
+<html>
+
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+
+    <p>선택된 li : <span></span></p>
+  </body>
+
+</html>
+
+<script>
+  const text = document.querySelector('span');
+  const lists = document.querySelector('ul');
+
+  const clickFunc = (e) => {
+    text.innerHTML = e.target.innerHTML
+  }
+
+  lists.addEventListener('click', clickFunc);
+</script>
