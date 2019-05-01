@@ -31,7 +31,7 @@ yarn run build && yarn start (production 환경)
 
 
 # Apollo
-- Apollo는 Client, Server 라이브러리, 캐싱 및 궈리 분석도구를 제공한다.
+- Apollo는 Client, Server 라이브러리, 캐싱 및 쿼리 분석도구를 제공한다.
 - REST API와 Redux를 대체하는 GraphQL과 Apollo.
 - graphql을 기반으로 한 상태관리 플랫폼이다. 클라이언트에서 graphql을 사용하여 데이터를 가져오는 UI를 만들 때 사용하기 좋다.
 - 특히 React하고 결합이 좋다. => 컴포넌트 자체에 Query를 녹여서 구현하기가 쉬워진다.
