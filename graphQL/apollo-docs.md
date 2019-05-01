@@ -38,9 +38,24 @@ yarn run build && yarn start (production 환경)
 ```
 yarn install apollo-boost react-apollo graphql
 ```
-- `apollo-boost` : Apollo Client를 설정하는데 필요한 것이 들어있는 패키지
-- `react-apollo` : React를 위한 apollo
-- `graphql` : GraphQL 쿼리를 사용할 수 있다.
+> - `apollo-boost` : Apollo Client를 설정하는데 필요한 것이 들어있는 패키지
+> - `react-apollo` : React를 위한 apollo
+> - `graphql` : GraphQL 쿼리를 사용할 수 있다.
+
+일단, Query로 요청을 보낼 때, 보내고싶은 것들을 조합해서 보낼 수 있는 장점이 있다.
+그리고
+```js
+import { ApolloConsumer } from 'react-apollo';
+```
+를 통해 로컬에서 상태관리를 할 수 있다. apollo-client의 cache state를 사용한다. client의 cache를 읽어오고 업데이트 할 수 있다. apollo cache는 앱이 query, mutation으로 네트워킹한 결과를 자동으로 캐쉬에 기록한다. 이와 별도로 원하는 만큼의 추가 데이터를 관리할 수 있다.
+
+apollo cache의 데이터를 업데이트 하는 방법은 여러가지가 있다. writeDate, writeQuery 등의 메소드가 존재하지만, apollo client에서 로컬 resolver를 작성하여 mutation을 통해 데이터를 변경하기를 권장한다. 
+
+- `resolver` : 각 쿼리 필드에 대한 요청을 처리하는 로직을 담고 있는 함수
+
+그러면 컴포넌트에서 호출하여 데이터를 변경할 수 있다.
+
+[Apollo docs](https://www.apollographql.com/docs/react/)를 보고 문법과 친숙해지고 실제 프로젝트에 적용해보려한다. 나새끼 파이팅
 
 
 # 참고링크
