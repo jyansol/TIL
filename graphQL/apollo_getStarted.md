@@ -13,6 +13,8 @@ brew install yarn
 먼저 `apollo-boost`에서 `ApolloClient`를 import해서 client를 생성한다. 
 ```js
 import ApolloClient from "apollo-boost";
+```
+```js
 const client = new ApolloClient({
   uri: "https://48p1r2roz4.sse.codesandbox.io"
 });
@@ -80,7 +82,7 @@ const ExchangeRates = () => (
 <Query> 컴포넌트에게 ExchangeRates라는 변수명을 붙여주고, App 컴포넌트에서 `ApolloProvider`로 감싸서 렌더링 하는 코드를 작성한다.
 그럼 실제 데이터에 접근해서 렌더링된다! :notes:
 
-### :seedling: withou Apollo-boost
+### :seedling: without Apollo-boost
 위 예제에서는 Apllo-boost를 사용했지만, Apollo-boost 없이 설정할 수 있다.
 Apollo-boost는 ApolloClient를 빠르게 시작할 수 있는 좋은 방법이지만, 기본적으로 지원하지 않는 기능들이 많다. 
 
@@ -92,7 +94,7 @@ Apollo-boost는 ApolloClient를 빠르게 시작할 수 있는 좋은 방법이�
 > - apollo-link-state
 
 #### :hear_no_evil: How to
-ApolloClient를 초기화해야한다.
+Apollo-boost에서 import한 ApolloClient를 초기화해야한다.
 ```
 yarn install apollo-client apollo-cache-inmemory apollo-link-http apollo-link-error apollo-link graphql-tag --save
 ```
