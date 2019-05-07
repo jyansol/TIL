@@ -13,4 +13,3 @@ graphQL에서 성공적으로 실행되는 query는 Apollo에서도 실행된다
   - [쿼리] **현재비밀번호**와 **데이터의 비밀번호**가 일치하는지 검사
   - [뮤테이션] **새로운비밀번호**를 **데이터의 비밀번호**에 대입
 
-## [Mutation codesandbox example](https://codesandbox.io/s/v3mn68xxvy)
