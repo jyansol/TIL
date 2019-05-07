@@ -30,7 +30,7 @@ const client = new ApolloClient({
 ```js
 import { ApolloProvider } from "react-apollo";
 ```
-그리고 `index.js` 파일에 `ApolloProvider`로 감싸주고, client속성에 client(서버가 저장된 변수)를 넘겨주면 ApolloProvider 안에서 렌더링되는 모든 컴포넌트에서 서버와 연결이 가능하다. 
+그리고 `index.js` 파일에 `ApolloProvider`로 감싸주고, client속성에 client(서버가 저장된 변수)를 넘겨주면 ApolloProvider 안에서 **렌더링되는 모든 컴포넌트**에서 서버와 연결이 가능하다. 
 ```js
 const App = () => (
   <ApolloProvider client={client}>
@@ -48,7 +48,7 @@ render(<App />, document.getElementById("root"));
 ```
 
 # 3. Request data
-`ApolloProvider`로 컴포넌트들을 감쌌으면, 쿼리를 보낼 <Query> 컴포넌트를 작성한다.
+`ApolloProvider`로 컴포넌트들을 감쌌으면, 각각의 컴포넌트에서 쿼리를 보내서 사용할 코드 상위에 <Query> 컴포넌트로 감싼다.
 ```js
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
