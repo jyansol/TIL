@@ -81,7 +81,7 @@ doHomework('math', alertFinished);
 ```
 
 ### ! 콜백함수에도 문제점이 있다.
-![콜백지옥](../_etc/_hell.jpeg)
+![콜백지옥](../../_etc/_hell.jpeg)
 - Callback 함수가 그 결과 값을 가지고 Callback을 다시 호출하고, 그 결과 값으로 또 다시 Callback을 호출하게 되면 발생한다.
 
 ### 결론
