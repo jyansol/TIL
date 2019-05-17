@@ -113,7 +113,7 @@ function Example() {
   );
 }
 ```
-## :octocat:
+## :octocat: 정리
 LifeCycle API는 컴포넌트가 사용될 때 여러상황에 따라 호출하는 방법입니다. => 그럼 LifeCycle을 사용하지 않으면
 - `componentDidMount()` : 컴포넌트가 mount되고 사용할 준비가 되었다. 컴포넌트가 렌더링 되지 않았을 때 할 수 없었던 것들을 모두 할 수 있는 메소드. 기본적으로 DOM에 대한 접근이 필요한 설정을 수행하고 필요한 데이터를 가져온다.
   * <canvas> 에 렌더링
