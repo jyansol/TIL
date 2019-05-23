@@ -89,6 +89,8 @@ class Example extends React.Component {
 }
 ```
 
+- hooks를 사용하면 LifeCycle 메서드 이름대신 `코드가 수행중인 작업을 기반`으로 코드를 분리할 수 있다.
+
 * :ghost: useEffect()
 ```jsx
 import React, { useState, useEffect } from 'react';
@@ -114,13 +116,10 @@ function Example() {
 }
 ```
 ## :octocat: 정리
-LifeCycle API는 컴포넌트가 사용될 때 여러상황에 따라 호출하는 방법입니다. => 그럼 LifeCycle을 사용하지 않으면
+LifeCycle API는 컴포넌트가 사용될 때 여러상황에 따라 호출하는 방법입니다. => 그럼 LifeCycle을 사용하지 않으면 => 컴포넌트가 렌더링되지 않아도 사용할 수 있다.
 - `componentDidMount()` : 컴포넌트가 mount되고 사용할 준비가 되었다. 컴포넌트가 렌더링 되지 않았을 때 할 수 없었던 것들을 모두 할 수 있는 메소드. 기본적으로 DOM에 대한 접근이 필요한 설정을 수행하고 필요한 데이터를 가져온다.
   * <canvas> 에 렌더링
   * GA
   * EventListener 추가
   * Ajax 호출을 시작하여 컴포넌트에서 사용해야 하는 데이터를 로드한다.
   * setState를 호출한다.
-> 이상적인 애플리케이션에서는 렌더링과 관련된 이슈는 거의 `state`와 `props`를 통해 제어한다. 하지만 몇몇의 경우, 더 명확한 제어가 필요할 때가 있다. 때문에 LifeCycle에 접근하여 이상적인 동작에 영향을 끼치지 않아야한다.
-
-- hooks를 사용하면 LifeCycle 메서드 이름대신 `코드가 수행중인 작업을 기반`으로 코드를 분리할 수 있다.
