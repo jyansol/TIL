@@ -1,4 +1,4 @@
-# Queries
+# 📌 Queries :: 로컬상태관리 편
 
 ## Learn how to fetch data with Query components
 graphQL에서 성공적으로 실행되는 query는 Apollo에서도 실행된다. => 왜냐하면 Apollo는 graphQL 기반이기 때문에
@@ -12,7 +12,7 @@ import gql from 'graphql-tag';
 ```
 ```jsx
 export const EXAMPLE = gql`
-  query Example {
+  query Example { 
     example @client {
       value1
       value2
