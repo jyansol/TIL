@@ -13,6 +13,7 @@ graphQL API는 보통 하나의 Endpoint를 사용하며, 요청시 사용하는
   * 헷갈리지 않게 전부 같은 이름으로 작성한다.
 
 ```js
+//queries.js
 export const GET_DOG_PHOTO = gql`
   query GetDogPhoto($breed: String!) {
     getDogPhoto(breed: $breed) {
@@ -30,6 +31,7 @@ export const GET_DOG_PHOTO = gql`
 이 query문을 사용하려면, index에서 해당 Queries를 import한 후, 컴포넌트를 export 해주는 영역에서 `compose`를 통해 해당 query의 data를 불러온다.
 
 ```js
+//index.js
 export default compose(
   graphql(Queries.GET_DOG_PHOTO, {
     props: ({ data }) => ({
@@ -42,6 +44,7 @@ export default compose(
 컴포넌트에서 아래와 같이 사용하는데, DogPhoto 컴포넌트는 breed를 props로 받고 있다. 이 값은 상위 컴포넌트의 값으로, variables라는 props가 추가되어 graphQL query에 variables를 포함하여 보낼 수 있다.
 
 ```js
+//index.js
 const DogPhoto = ({ breed }) => (
   <Query query={GET_DOG_PHOTO} variables={{ breed }}>
     {({ loading, error, data }) => {
@@ -65,15 +68,17 @@ const DogPhoto = ({ breed }) => (
 
 ## 1. react-apollo-hooks 시작하기
 ```js
+//index.js
 import { useQuery } from 'react-apollo-hooks';
 
-function Example() {
+const DogPhoto = () => {
   // ...
 }
 ```
 ## 2. useQuery로 query문 가져오기
 위의 variables에 대한 내용은 생략한 코드입니다.
 ```js
+//index.js
 const DogPhoto = () => {
   const {data: {getDogPhoto}} = useQuery(Queries.GET_DOG_PHOTO);
 }  
@@ -81,6 +86,7 @@ const DogPhoto = () => {
 ## 3. data 사용하기
 useQuery()안에 기본값을 넣을 수 있다. 
 ```jsx
+//index.js
 const DogPhoto = () => {
   const {data: {getDogPhoto}} = useQuery(Queries.GET_DOG_PHOTO);
   const { id, displayImage } = getDogPhoto;
