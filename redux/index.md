@@ -1,0 +1,7 @@
+1. ACTION 생성
+- 상태에 어떤 변화가 필요할 때
+2. ACTION FUNCTION
+3. REDUCER
+4. STORE
+5. DISPATCH
+6. SUBSCRIBE
