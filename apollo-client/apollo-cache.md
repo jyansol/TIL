@@ -1,5 +1,3 @@
-### apollo-client-cache 를 사용하는 이유
-### apollo-cache의 장점
 
 
 ### 로컬 상태 관리
